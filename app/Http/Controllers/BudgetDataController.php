@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\BudgetGroup;
+
 
 class BudgetDataController extends Controller
 {
@@ -29,17 +29,7 @@ class BudgetDataController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'nama_kelompok' => 'required|string|max:255',
-            'deskripsi' => 'nullable|string',
-        ]);
 
-        $budgetGroup = BudgetGroup::create([
-            'nama_kelompok' => $validatedData['nama_kelompok'],
-            'deskripsi' => $validatedData['deskripsi'],
-        ]);
-
-        return response()->json(['message' => 'Budget group created successfully', 'data' => $budgetGroup], 201);
     }
 
     /**
