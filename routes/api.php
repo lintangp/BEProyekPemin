@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BudgetGroupController;
+use App\Http\Controllers\BudgetDataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('budget-groups', BudgetGroupController::class);
+Route::resource('budget-data', BudgetDataController::class);

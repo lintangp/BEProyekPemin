@@ -12,7 +12,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('budget_datas', function (Blueprint $table) {
-            $table->increments('id_data_anggaran');
+            $table->increments('id');
             $table->unsignedInteger('id_kelompok_anggaran');
             $table->integer('anggaran');
             $table->date('tanggal');

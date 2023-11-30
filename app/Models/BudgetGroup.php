@@ -14,4 +14,9 @@ class BudgetGroup extends Model
 
     protected $fillable = ['nama_kelompok', 'deskripsi'];
     public $timestamps = true;
+
+    public function budgetData()
+    {
+        return $this->hasMany(BudgetData::class, 'id_kelompok_anggaran');
+    }
 }
